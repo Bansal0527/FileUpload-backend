@@ -35,7 +35,7 @@ async function uploadFileToCloudinary(file, folder, quality) {
     if(quality) {
         options.quality = quality;
     }
-    
+
     options.resource_type = "auto";
     return await cloudinary.uploader.upload(file.tempFilePath, options);
 }
@@ -68,7 +68,7 @@ exports.imageUpload = async (req, res) => {
             name,
             tags,
             email,
-            imageUrl:response.secure_url,
+            imageURL:response.secure_url,
           });
 
         res.json({
